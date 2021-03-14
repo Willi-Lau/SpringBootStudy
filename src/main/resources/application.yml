@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: demo
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  jackson:
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/fruit?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 12345
+
+
+
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+mybatis:
+  type-aliases-package: com.lwy.demo.entity
+  mapper-locations: mapper/*.xml
+server:
+  port: 8080
+
+#配置日志级别  debug info 常用
+logging:
+  level:
+    root: info
+#    输出到文件  不指定路径再当前项目下生成  name 为文件的名字
+  file:
+    name: springbootstudy-file.log
