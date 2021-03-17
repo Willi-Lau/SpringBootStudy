@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: demo
@@ -16,6 +19,17 @@ spring:
     host: 127.0.0.1
     port: 6379
     password: 12345
+#配置ACTIVEMQ
+  activemq:
+    broker-url: nio://127.0.0.1:61608
+    user: admin
+    password: admin
+  jms:
+    pub-sub-domain: true   #false = Queue    true = Topic
+
+#自定义队列名字
+myqueue: boot-activemq-queue
+mytopic: bppt-activemq-topic
 
 
 
@@ -30,8 +44,7 @@ pagehelper:
 mybatis:
   type-aliases-package: com.lwy.demo.entity
   mapper-locations: mapper/*.xml
-server:
-  port: 8080
+
 
 #配置日志级别  debug info 常用
 logging:
@@ -40,3 +53,6 @@ logging:
 #    输出到文件  不指定路径再当前项目下生成  name 为文件的名字
   file:
     name: springbootstudy-file.log
+
+
+
