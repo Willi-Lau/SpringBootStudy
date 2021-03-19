@@ -19,7 +19,7 @@ public class ConfigBeanActiveMQ{
     /**
      * 注入Queue名字
      */
-    @Value("${mytopic}")
+    @Value("${myqueue}")
     private String myQueue;
     /**
      * 创建返回Queue
@@ -33,12 +33,12 @@ public class ConfigBeanActiveMQ{
      * 注入Topic 名字
      */
     @Value("${mytopic}")
-    private String topicname;
+    private String mytopic;
     /**
      * 创建主题
      */
     @Bean
     public Topic topic(){
-        return new ActiveMQTopic(topicname);
+        return new ActiveMQTopic(mytopic);
     }
 }

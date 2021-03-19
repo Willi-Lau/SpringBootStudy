@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class Producer {
     //连接位置 根据主机ip地址  查看IP  ipconfig
     public static final String ACTIVEMQ_URL = "tcp://127.0.0.1:61616";
-    public static final String TOPIC_NAME = "topic01";
+    public static final String TOPIC_NAME = "topic-jdbc";
 
     @Test
     void test0() throws Exception{

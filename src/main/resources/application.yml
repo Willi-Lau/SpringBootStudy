@@ -15,17 +15,22 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/fruit?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: root
+  #Redis相关配置
   redis:
     host: 127.0.0.1
     port: 6379
     password: 12345
 #配置ACTIVEMQ
   activemq:
-    broker-url: nio://127.0.0.1:61608
+    broker-url: tcp://127.0.0.1:61616
     user: admin
     password: admin
+    packages:
+      trust-all: true  #信任包
   jms:
     pub-sub-domain: true   #false = Queue    true = Topic
+    template:
+      delivery-mode: persistent   #acticemq 在SpringBoot中的持久化
 
 #自定义队列名字
 myqueue: boot-activemq-queue

@@ -9,7 +9,7 @@ public class Customer2 {
 
     //连接位置 根据主机ip地址  查看IP  ipconfig
     public static final String ACTIVEMQ_URL = "tcp://127.0.0.1:61616";
-    public static final String TOPIC_NAME = "topic01";
+    public static final String TOPIC_NAME = "topic-jdbc";
     public static void main(String[] args) throws Exception {
         /**
          * 消费者 获取MQ的地址和名字要和生产者一样
