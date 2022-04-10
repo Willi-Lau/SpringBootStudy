@@ -38,6 +38,8 @@ spring:
 #      生产者序列化器
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      重试次数
+      retries: 1
 
     consumer:
 #      消费者序列化器

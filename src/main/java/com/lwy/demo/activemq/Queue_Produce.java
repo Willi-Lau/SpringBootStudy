@@ -2,7 +2,6 @@ package com.lwy.demo.activemq;
 
 
 import com.lwy.demo.entity.Student;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
