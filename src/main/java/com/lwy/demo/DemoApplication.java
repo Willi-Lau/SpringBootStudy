@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableCaching
 @SpringBootApplication
 @EnableTransactionManagement
-@EnableScheduling            //activemq 间隔发送消息的注解
+//@EnableScheduling            //activemq 间隔发送消息的注解
 public class DemoApplication {
 
     public static void main(String[] args) {

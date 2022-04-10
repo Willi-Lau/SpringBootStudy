@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 9080
 
 spring:
   application:
@@ -21,16 +21,31 @@ spring:
     port: 6379
     password: 12345
 #配置ACTIVEMQ
-  activemq:
-    broker-url: tcp://127.0.0.1:61616
-    user: admin
-    password: admin
-    packages:
-      trust-all: true  #信任包
+#  activemq:
+#    broker-url: tcp://127.0.0.1:61616
+#    user: admin
+#    password: admin
+#    packages:
+#      trust-all: true  #信任包
   jms:
-    pub-sub-domain: true   #false = Queue    true = Topic
+    pub-sub-domain: false #false = Queue    true = Topic
     template:
       delivery-mode: persistent   #acticemq 在SpringBoot中的持久化
+#kafka
+  kafka:
+    bootstrap-servers: 192.168.10.177:9092
+    producer:
+#      生产者序列化器
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    consumer:
+#      消费者序列化器
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      消费者消费的group_id
+      group-id: kafkaTest1
+
 
 #自定义队列名字
 myqueue: boot-activemq-queue
@@ -58,6 +73,25 @@ logging:
 #    输出到文件  不指定路径再当前项目下生成  name 为文件的名字
   file:
     name: springbootstudy-file.log
+
+
+#es
+#elasticsearch:
+#  host: 127.0.0.1
+#  port: 9200
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -15,9 +15,9 @@ import javax.naming.ldap.PagedResultsControl;
 /**
  * es 核心类
  */
-@Configuration
-@ConfigurationProperties(prefix = "elasticsearch")   //关联 application.yaml
-@Data
+//@Configuration
+//@ConfigurationProperties(prefix = "elasticsearch")   //关联 application.yaml
+//@Data
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
     private String host;
